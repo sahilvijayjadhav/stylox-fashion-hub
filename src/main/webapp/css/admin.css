@@ -1,0 +1,102 @@
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+/* Custom Navy Blue and White Theme */
+:root {
+    --navy-blue: #003366;
+    --white: #ffffff;
+  }
+  
+  /* Body and Wrapper */
+  body {
+    background-color: var(--white);
+    color: var(--navy-blue);
+  }
+  
+  .wrapper {
+    display: flex;
+    width: 100%;
+  }
+  
+  /* Sidebar */
+  #sidebar {
+    width: 250px;
+    min-width: 250px;
+    background: var(--navy-blue);
+    color: var(--white);
+    transition: all 0.3s;
+    height: 100vh;
+    position: fixed;
+  }
+  
+  #sidebar.active {
+    margin-left: -250px;
+  }
+  
+  #sidebar .sidebar-header {
+
+    background: var(--navy-blue);
+    text-align: center;
+  }
+  
+  #sidebar ul.components {
+  }
+  
+  #sidebar ul li a {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+  }
+  
+  #sidebar ul li a:hover {
+    background: #001f3f;
+  }
+  
+  /* Page Content */
+  #content {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    transition: all 0.3s;
+  }
+  
+  #content.active {
+    margin-left: 0;
+  }
+  
+  /* Top Navigation Bar */
+  .navbar {
+    padding: 15px 10px;
+    background: var(--white);
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+  
+  .btn-navy {
+    background: var(--navy-blue);
+    color: var(--white);
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #sidebar {
+      margin-left: -250px;
+    }
+  
+    #sidebar.active {
+      margin-left: 0;
+    }
+  
+    #content {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    #content.active {
+      margin-left: 250px;
+    }
+  }
